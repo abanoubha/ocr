@@ -6,6 +6,10 @@ import (
 	"github.com/otiai10/gosseract"
 )
 
+// go
+// fyne : GUI
+// mac , linux : snap n flatpak n elementary-flatpak , windows
+
 func main() {
 	gtk.Init(nil)
 
