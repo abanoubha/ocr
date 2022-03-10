@@ -4,6 +4,15 @@ This software is built with [Go](https://golang.org) language and [Gtk3](https:/
 
 ![first iteration](./screenshots/1st-iteration.png)
 
+## features, goals and values
+
+- scalable : take advantage of all CPU cores to get the job done faster
+- bulk : coroutines and parallelism for tasks / jobs
+- easy to use
+- available on all operating systems
+- intuitive graphical user interface
+- composable CLI app for scripts and automation
+
 ## Done & TO-DO
 
 - [ ] Debian
