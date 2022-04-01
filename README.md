@@ -21,3 +21,10 @@ This software is built with [Go](https://golang.org) language and [Gtk3](https:/
 - [ ] Elementary OS (if possible)
 - [ ] Mac OS (via HomeBrew)
 - [ ] Windows (if possible)
+
+## Thinking n Ideas
+
+- cut the image into pieces/segments and concurrently OCR them. (performance)
+- PDF to TXT
+- PDF to docx
+- PDF to selectable-text PDF
