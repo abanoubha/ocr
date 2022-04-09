@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/otiai10/gosseract"
+	gosseract "github.com/otiai10/gosseract/v2"
 )
 
 // ocr --lang=ara --img=xyz.png
@@ -31,6 +31,11 @@ func main() {
 	if err != nil {
 		fmt.Println("Error : ", err.Error())
 	}
+
+	if extracted == "" {
+		fmt.Println("no text extracted! something went wrong")
+	}
+
 	fmt.Println(extracted)
 }
 
@@ -45,8 +50,8 @@ func ocr(imgpath, lang string) (string, error) {
 
 	//boundingBox, _ := client.GetBoundingBoxes(PageIteratorLevel.RIL_SYMBOL)
 
-	text, err := client.Text()
-	// text, err := client.HOCRText()
+	// text, err := client.Text()
+	text, err := client.HOCRText()
 	if err != nil {
 		return text, nil
 	}
