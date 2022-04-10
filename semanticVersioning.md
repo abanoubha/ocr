@@ -1,6 +1,6 @@
 # Semantic Versioning
 
-vX.Y.Z
+## vX.Y.Z
 
 X : major change, breaking change
 
@@ -8,7 +8,7 @@ Y : minor change, feature edition
 
 Z : bug fixes, security fixes
 
-For example:
+### For example
 
 v0.1.0 alpha or beta version
 
