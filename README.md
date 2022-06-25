@@ -1,6 +1,6 @@
 # Image to Text OCR Software
 
-v0.1.0 pre-alpha (WIP) ([remantic versioning](semanticVersioning.md))
+v0.1.0 pre-alpha (WIP) ([semantic versioning](semanticVersioning.md))
 
 The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 
