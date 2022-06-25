@@ -1,8 +1,6 @@
-package main
+package gui
 
 import (
-	"flag"
-	"fmt"
 	"image"
 	"os"
 
@@ -10,35 +8,10 @@ import (
 	gosseract "github.com/otiai10/gosseract/v2"
 )
 
-// ocr --lang=ara --img=xyz.png
+// ocr-gui
 func main() {
-	lang := flag.String("lang", "eng", " Language of the written text. eng or ara as a language.")
-	img := flag.String("img", "", " Image.")
-	flag.Parse()
 
-	if *img == "" {
-		fmt.Println("Usage : ocr --lang=eng --img=~/Downloads/xyz.png")
-		flag.PrintDefaults()
-		os.Exit(1)
-	}
-
-	if *lang != "eng" && *lang != "ara" {
-		fmt.Println("--lang must be ara for Arabic or eng for English.")
-		flag.PrintDefaults()
-		os.Exit(1)
-	}
-
-	fmt.Println(*lang, *img)
-	extracted, err := ocr(*img, *lang, false)
-	if err != nil {
-		fmt.Println("Error : ", err.Error())
-	}
-
-	if extracted == "" {
-		fmt.Println("no text extracted! something went wrong")
-	}
-
-	fmt.Println(extracted)
+	// extracted, err := ocr(*img, *lang, false)
 }
 
 func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
@@ -49,7 +22,7 @@ func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
 	client.SetLanguage(lang)
 
 	if isBlackBg == true {
-		imgIo, _ := os.Open(imgpath)
+		imgIo, _ := os.Open("/Users/mbp/projects/ocr/img/ar-black-white.jpg")
 		imgDec, _, _ := image.Decode(imgIo)
 		inverted := imaging.Invert(imgDec)
 		imaging.Save(inverted, "./temp.jpg")
