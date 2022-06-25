@@ -22,7 +22,7 @@ func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
 	client.SetLanguage(lang)
 
 	if isBlackBg == true {
-		imgIo, _ := os.Open("/Users/mbp/projects/ocr/img/ar-black-white.jpg")
+		imgIo, _ := os.Open(imgpath)
 		imgDec, _, _ := image.Decode(imgIo)
 		inverted := imaging.Invert(imgDec)
 		imaging.Save(inverted, "./temp.jpg")
