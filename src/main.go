@@ -49,11 +49,15 @@ func ocr(imgpath, lang string) (string, error) {
 	client.SetImage(imgpath)
 
 	//boundingBox, _ := client.GetBoundingBoxes(PageIteratorLevel.RIL_SYMBOL)
+	// boundingBox, err := client.GetBoundingBoxes(gosseract.RIL_SYMBOL)
+	// if err != nil {
+	// 	return "", err
+	// }
 
-	// text, err := client.Text()
-	text, err := client.HOCRText()
+	text, err := client.Text()
+	// text, err := client.HOCRText()
 	if err != nil {
-		return text, nil
+		return "", err
 	}
-	return "", err
+	return text, nil
 }
