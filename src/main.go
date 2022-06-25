@@ -3,8 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
+	"image"
 	"os"
 
+	"github.com/disintegration/imaging"
 	gosseract "github.com/otiai10/gosseract/v2"
 )
 
@@ -27,7 +29,7 @@ func main() {
 	}
 
 	fmt.Println(*lang, *img)
-	extracted, err := ocr(*img, *lang)
+	extracted, err := ocr(*img, *lang, false)
 	if err != nil {
 		fmt.Println("Error : ", err.Error())
 	}
@@ -39,14 +41,23 @@ func main() {
 	fmt.Println(extracted)
 }
 
-func ocr(imgpath, lang string) (string, error) {
+func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
 	client := gosseract.NewClient()
 	defer client.Close()
 
 	// client.Languages = []string{"eng", "ara"}
 	client.SetLanguage(lang)
 
-	client.SetImage(imgpath)
+	if isBlackBg == true {
+		imgIo, _ := os.Open("/Users/mbp/projects/ocr/img/ar-black-white.jpg")
+		imgDec, _, _ := image.Decode(imgIo)
+		inverted := imaging.Invert(imgDec)
+		imaging.Save(inverted, "./temp.jpg")
+		defer os.Remove("./temp.jpg")
+		client.SetImage("./temp.jpg")
+	} else {
+		client.SetImage(imgpath)
+	}
 
 	//boundingBox, _ := client.GetBoundingBoxes(PageIteratorLevel.RIL_SYMBOL)
 	// boundingBox, err := client.GetBoundingBoxes(gosseract.RIL_SYMBOL)
