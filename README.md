@@ -8,11 +8,11 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 
 ## features, goals and values
 
-- scalable : take advantage of all CPU cores to get the job done faster
-- bulk : coroutines and parallelism for tasks / jobs
-- easy to use
-- available on all operating systems
-- intuitive graphical user interface
+- __scalable__ : take advantage of all CPU cores to get the job done faster
+- __bulk__ / __patch-processing__ : coroutines and parallelism for tasks / jobs
+- __easy to use__ : user friendly
+- All OS : available on all operating systems
+- _intuitive_ graphical user interface
 - composable CLI app for scripts and automation
 
 ## Done & TO-DO
