@@ -48,7 +48,7 @@ func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
 	// client.Languages = []string{"eng", "ara"}
 	client.SetLanguage(lang)
 
-	if isBlackBg == true {
+	if isBlackBg {
 		imgIo, _ := os.Open(imgpath)
 		imgDec, _, _ := image.Decode(imgIo)
 		inverted := imaging.Invert(imgDec)
