@@ -31,3 +31,7 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 - [ ] PDF to TXT
 - [ ] PDF to docx
 - [ ] PDF to selectable-text PDF
+
+### References
+
+- [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
