@@ -1,4 +1,6 @@
-# Image to Text OCR Software
+# OCR Text Scanner
+
+Image to Text OCR Software
 
 v0.1.0 pre-alpha (WIP) ([semantic versioning](semanticVersioning.md))
 
