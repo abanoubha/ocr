@@ -17,7 +17,7 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 - [x] support English OCR
 - [x] support Arabic OCR
 - [x] add tests
-- [x] add test images for binarization/thresholding
+- [x] add test images for binarization/thresholding from [renard314/textfairy](https://github.com/renard314/textfairy)
 - [ ] cut the image into pieces/segments and concurrently OCR them. (performance)
 - [ ] PDF to TXT
 - [ ] PDF to docx
@@ -32,6 +32,5 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 ### References
 
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
-- [got test images from renard314/textfairy](https://github.com/renard314/textfairy)
 - [train / refine tesseract OCR](https://github.com/abanoub-hanna/train-tesseract-ocr)
 - [tesseractfonts : fine tune tesseract for new fonts](https://github.com/dhivehi/tesseractfonts)
