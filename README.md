@@ -1,6 +1,6 @@
 # OCR Text Scanner
 
-Image to Text OCR Software
+Text OCR Scanner Software Tool. It is for extracting text from images and PDF files.
 
 v0.1.0<sup>[1](#1)</sup> WIP<sup>[2](#2)</sup>
 
