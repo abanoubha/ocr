@@ -10,6 +10,9 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 - [x] OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 - [x] image to text
+- [ ] PDF to text
+- [ ] PDF to docx
+- [ ] PDF to selectable-text PDF
 - [ ] __scalable__ : take advantage of all CPU cores to get the job done faster
 - [ ] __bulk__ / __patch-processing__ : coroutines and parallelism for tasks / jobs
 - [ ] composable CLI app for scripts and automation
@@ -19,9 +22,6 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 - [x] add tests
 - [x] use some test images from [renard314/textfairy](https://github.com/renard314/textfairy)
 - [ ] cut the image into pieces/segments and concurrently OCR them. (performance)
-- [ ] PDF to TXT
-- [ ] PDF to docx
-- [ ] PDF to selectable-text PDF
 - [ ] available on Debian & Debian-based distros
 - [ ] available as snap
 - [ ] available as flatpak
