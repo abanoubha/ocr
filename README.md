@@ -2,7 +2,7 @@
 
 Image to Text OCR Software
 
-v0.1.0 pre-alpha (WIP) ([semantic versioning](semanticVersioning.md))
+v0.1.0<sup>[1](#1)</sup> pre-alpha (WIP) ([semantic versioning](semanticVersioning.md))
 
 The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 
@@ -39,3 +39,4 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
 - [got test images from renard314/textfairy](https://github.com/renard314/textfairy)
+- <a id="1">[1]</a> [semantic versioning](semanticVersioning.md)
