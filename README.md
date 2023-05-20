@@ -28,6 +28,7 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 - [ ] available on Elementary OS
 - [ ] available on Mac OS (likely via HomeBrew)
 - [ ] available on Windows
+- [ ] scan history : { original image, processed image, extracted text }
 
 ### References
 
