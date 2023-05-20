@@ -37,3 +37,4 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 ### References
 
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
+- [got test images from renard314/textfairy](https://github.com/renard314/textfairy)
