@@ -8,7 +8,7 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ## Done & TO-DO : features, goals and values
 
-- [x] standing on the shoulders of [giants](#3)<sup>3</sup>
+- [x] OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 - [x] image to text
 - [ ] __scalable__ : take advantage of all CPU cores to get the job done faster
 - [ ] __bulk__ / __patch-processing__ : coroutines and parallelism for tasks / jobs
@@ -31,7 +31,6 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ### References
 
-- <a id="3">[3]</a> OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
 - [got test images from renard314/textfairy](https://github.com/renard314/textfairy)
 - [train / refine tesseract OCR](https://github.com/abanoub-hanna/train-tesseract-ocr)
