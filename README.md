@@ -4,8 +4,6 @@ Text OCR Scanner Software Tool. It is for extracting text from images and PDF fi
 
 v0.1.0<sup>[1](#1)</sup> WIP<sup>[2](#2)</sup>
 
-The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
-
 ![first iteration](./screenshots/1st-iteration.png)
 
 ## features, goals and values
@@ -19,6 +17,7 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 
 ## Done & TO-DO
 
+- [x] standing on the shoulders of [giants](#3)
 - [x] image to text
 - [x] support English OCR
 - [x] support Arabic OCR
@@ -39,5 +38,6 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 
 - <a id="1">[1]</a> [semantic versioning](semanticVersioning.md)
 - <a id="2">[2]</a> Work in Progress.
+- <a id="3">[3]</a> OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
 - [got test images from renard314/textfairy](https://github.com/renard314/textfairy)
