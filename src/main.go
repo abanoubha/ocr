@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"image"
-	"image/color"
 	"os"
 	"strconv"
 
@@ -111,33 +110,34 @@ func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
 	return text, nil
 } // ocr
 
-func threshold(img image.Image, threshold float64) image.Image {
-	// Get the image dimensions.
-	width, height := img.Bounds().Dx(), img.Bounds().Dy()
+// // implemented in Go
+// func threshold(img image.Image, threshold float64) image.Image {
+// 	// Get the image dimensions.
+// 	width, height := img.Bounds().Dx(), img.Bounds().Dy()
 
-	// Create a new image with the same dimensions as the original image.
-	thresholded := image.NewGray(img.Bounds())
+// 	// Create a new image with the same dimensions as the original image.
+// 	thresholded := image.NewGray(img.Bounds())
 
-	// Set the pixels to black if they are below the threshold, and white otherwise.
-	for y := 0; y < height; y++ {
-		for x := 0; x < width; x++ {
-			// Get the pixel value.
-			// v := img.At(x, y).Y
-			r, g, b, _ := img.At(x, y).RGBA()
-			v := float64(r+g+b) / (3 * 255)
+// 	// Set the pixels to black if they are below the threshold, and white otherwise.
+// 	for y := 0; y < height; y++ {
+// 		for x := 0; x < width; x++ {
+// 			// Get the pixel value.
+// 			// v := img.At(x, y).Y
+// 			r, g, b, _ := img.At(x, y).RGBA()
+// 			v := float64(r+g+b) / (3 * 255)
 
-			// Set the pixel.
-			if v < threshold {
-				thresholded.Set(x, y, color.Black)
-			} else {
-				thresholded.Set(x, y, color.White)
-			}
-		}
-	}
+// 			// Set the pixel.
+// 			if v < threshold {
+// 				thresholded.Set(x, y, color.Black)
+// 			} else {
+// 				thresholded.Set(x, y, color.White)
+// 			}
+// 		}
+// 	}
 
-	// Return the thresholded image.
-	return thresholded
-}
+// 	// Return the thresholded image.
+// 	return thresholded
+// }
 
 // func OtsuThreshold(img image.Image) image.Image {
 // 	// Get the image dimensions.
