@@ -24,6 +24,8 @@ for f in img/binarize/0{067,071,072,073,074,075,076,077,078,079,080,081,082,083,
 6,097,098,099,100}.png;gitpf "[img] add test image for binarize/threshold process" $f;sleep 30;end;
 ```
 
+** no need to write all of them , `seq` works well.
+
 ### with seq
 
 ```fish
