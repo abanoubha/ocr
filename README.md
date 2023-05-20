@@ -22,8 +22,8 @@ The OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tessera
 - [x] image to text
 - [x] support English OCR
 - [x] support Arabic OCR
-- [x] added tests
-- [x] added test images for binarization/thresholding
+- [x] add tests
+- [x] add test images for binarization/thresholding
 - [ ] Debian
 - [ ] snap
 - [ ] flatpak
