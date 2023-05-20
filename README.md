@@ -17,7 +17,7 @@ v0.1.0<sup>[1](#1)</sup> WIP<sup>[2](#2)</sup>
 
 ## Done & TO-DO
 
-- [x] standing on the shoulders of [giants](#3)
+- [x] standing on the shoulders of [giants](#3)<sup>3</sup>
 - [x] image to text
 - [x] support English OCR
 - [x] support Arabic OCR
