@@ -263,7 +263,7 @@ func adaptiveThresholdOtsu(imageName string, blockSize int, c float32) {
 
 	binary := gocv.NewMat()
 	defer binary.Close()
-	mat := gocv.NewMatFromScalar(gocv.Scalar{127, 0, 0, 0}, gocv.MatTypeCV16SC1)
+	mat := gocv.NewMatFromScalar(gocv.Scalar{Val1: 127, Val2: 0, Val3: 0, Val4: 0}, gocv.MatTypeCV16SC1)
 	gocv.Compare(threshold, mat, &binary, gocv.CompareGT)
 	result := gocv.NewMat()
 	defer result.Close()
