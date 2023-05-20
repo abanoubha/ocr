@@ -17,7 +17,7 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 - [x] support English OCR
 - [x] support Arabic OCR
 - [x] add tests
-- [x] add test images from [renard314/textfairy](https://github.com/renard314/textfairy)
+- [x] use some test images from [renard314/textfairy](https://github.com/renard314/textfairy)
 - [ ] cut the image into pieces/segments and concurrently OCR them. (performance)
 - [ ] PDF to TXT
 - [ ] PDF to docx
