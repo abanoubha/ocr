@@ -6,9 +6,11 @@ import (
 	"image"
 	"image/color"
 	"os"
+	"strconv"
 
 	"github.com/disintegration/imaging"
 	gosseract "github.com/otiai10/gosseract/v2"
+	"gocv.io/x/gocv"
 )
 
 // ocr --lang=ara --img=xyz.png
@@ -53,6 +55,28 @@ func main() {
 	}
 
 	fmt.Println(extracted)
+
+	// thresholding
+	adaptiveThresholdBin("0000", 61, 16)
+	adaptiveThresholdOtsu("0000", 61, 16)
+
+	adaptiveThresholdBin("0001", 41, 14)
+	adaptiveThresholdOtsu("0001", 41, 14)
+
+	adaptiveThresholdBin("0002", 61, 16)
+	adaptiveThresholdOtsu("0002", 61, 16)
+
+	adaptiveThresholdBin("0003", 11, 11)
+	adaptiveThresholdOtsu("0003", 11, 11)
+
+	adaptiveThresholdBin("0004", 11, 11)
+	adaptiveThresholdOtsu("0004", 11, 11)
+
+	adaptiveThresholdBin("0005", 31, 11)
+	adaptiveThresholdOtsu("0005", 31, 11)
+
+	adaptiveThresholdBin("0006", 31, 11)
+	adaptiveThresholdOtsu("0006", 31, 11)
 }
 
 func ocr(imgpath, lang string, isBlackBg bool) (string, error) {
@@ -183,3 +207,67 @@ func threshold(img image.Image, threshold float64) image.Image {
 // 	// Return the thresholded image.
 // 	return thresholded
 // } // OtsuThreshold
+
+// blockSize = 11,21,31,41,51,61,..
+// c = 1,2,3,4,..
+func adaptiveThresholdBin(imageName string, blockSize int, c float32) {
+	inpath := "../img/" + imageName + ".png"
+	img := gocv.IMRead(inpath, gocv.IMReadGrayScale)
+	defer img.Close()
+
+	// whitePixels := gocv.CountNonZero(img)
+	// totalPixels := img.Rows() * img.Cols()
+	// whitePercentage := float64(whitePixels) / float64(totalPixels) * 100.0
+
+	threshold := gocv.NewMat()
+	defer threshold.Close()
+
+	gocv.AdaptiveThreshold(img, &threshold, 255, gocv.AdaptiveThresholdMean, gocv.ThresholdBinary, blockSize, c)
+	// if whitePercentage > 50.0 {
+	// 	gocv.AdaptiveThreshold(img, &threshold, 255, gocv.AdaptiveThresholdMean, gocv.ThresholdBinary, blockSize, c)
+	// } else {
+	// 	gocv.AdaptiveThreshold(img, &threshold, 255, gocv.AdaptiveThresholdMean, gocv.ThresholdBinaryInv, blockSize, c)
+	// }
+
+	binary := gocv.NewMat()
+	defer binary.Close()
+	mat := gocv.NewMatFromScalar(gocv.Scalar{127, 0, 0, 0}, gocv.MatTypeCV16SC1)
+	gocv.Compare(threshold, mat, &binary, gocv.CompareGT)
+	result := gocv.NewMat()
+	defer result.Close()
+	binary.ConvertTo(&result, gocv.MatTypeCV8UC1)
+	outpath := "../img/" + imageName + "-adaptive-mean-bin-blk-" + strconv.Itoa(blockSize) + "-c-" + fmt.Sprintf("%0.0f", c) + ".png"
+	gocv.IMWrite(outpath, result)
+}
+
+func adaptiveThresholdOtsu(imageName string, blockSize int, c float32) {
+	inpath := "../img/" + imageName + ".png"
+	img := gocv.IMRead(inpath, gocv.IMReadGrayScale)
+	defer img.Close()
+
+	whitePixels := gocv.CountNonZero(img)
+	totalPixels := img.Rows() * img.Cols()
+	whitePercentage := float64(whitePixels) / float64(totalPixels) * 100.0
+
+	blur := gocv.NewMat()
+	defer blur.Close()
+	gocv.GaussianBlur(img, &blur, image.Point{5, 5}, 0, 0, gocv.BorderDefault)
+	threshold := gocv.NewMat()
+	defer threshold.Close()
+
+	if whitePercentage > 50.0 {
+		gocv.AdaptiveThreshold(img, &threshold, 255, gocv.AdaptiveThresholdMean, gocv.ThresholdBinary, blockSize, c)
+	} else {
+		gocv.AdaptiveThreshold(img, &threshold, 255, gocv.AdaptiveThresholdMean, gocv.ThresholdBinaryInv, blockSize, c)
+	}
+
+	binary := gocv.NewMat()
+	defer binary.Close()
+	mat := gocv.NewMatFromScalar(gocv.Scalar{127, 0, 0, 0}, gocv.MatTypeCV16SC1)
+	gocv.Compare(threshold, mat, &binary, gocv.CompareGT)
+	result := gocv.NewMat()
+	defer result.Close()
+	binary.ConvertTo(&result, gocv.MatTypeCV8UC1)
+	outpath := "../img/" + imageName + "-adaptive-mean-bin-blk-" + strconv.Itoa(blockSize) + "-c-" + fmt.Sprintf("%0.0f", c) + "-blur.png"
+	gocv.IMWrite(outpath, result)
+}
