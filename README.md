@@ -6,7 +6,9 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ![first iteration](./screenshots/1st-iteration.png)
 
-## Done & TO-DO : features, goals and values
+## Tasks
+
+Done & TO-DO : features, goals and values
 
 - [x] OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
 - [x] image to text
