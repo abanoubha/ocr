@@ -2,6 +2,8 @@
 
 Text OCR Scanner Software Tool. It is for extracting text from images and PDF files.
 
+This software is __UNDER HEAVY DEVELOPMENT__. Use [this OCR software](https://abanoubhanna.netlify.app/ocr) for now.
+
 v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ![first iteration](./screenshots/1st-iteration.png)
