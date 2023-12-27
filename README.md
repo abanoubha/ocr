@@ -37,5 +37,5 @@ Done & TO-DO of features, goals and values. tiny steps to the goal.
 ### References
 
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
-- [train / refine tesseract OCR](https://github.com/abanoub-hanna/train-tesseract-ocr)
+- [train / refine tesseract OCR](https://github.com/abanoubha/train-tesseract-ocr)
 - [tesseractfonts : fine tune tesseract for new fonts](https://github.com/dhivehi/tesseractfonts)
