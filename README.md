@@ -39,3 +39,11 @@ Done & TO-DO of features, goals and values. tiny steps to the goal.
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
 - [train / refine tesseract OCR](https://github.com/abanoubha/train-tesseract-ocr)
 - [tesseractfonts : fine tune tesseract for new fonts](https://github.com/dhivehi/tesseractfonts)
+
+## source code
+
+The source code of OCR project can be found on:
+
+- GitHub: <https://github.com/abanoubha/ocr.git>
+- GitLab: <https://gitlab.com/abanoubha/go-ocr.git>
+- CodeBerg: <https://codeberg.org/abanoubha/ocr.git>
