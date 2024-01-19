@@ -45,5 +45,5 @@ Done & TO-DO of features, goals and values. tiny steps to the goal.
 The source code of OCR project can be found on:
 
 - GitHub: <https://github.com/abanoubha/ocr.git>
-- GitLab: <https://gitlab.com/abanoubha/go-ocr.git>
+- GitLab: <https://gitlab.com/abanoubha/ocr.git>
 - CodeBerg: <https://codeberg.org/abanoubha/ocr.git>
