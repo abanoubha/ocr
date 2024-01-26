@@ -8,6 +8,20 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ![first iteration](./screenshots/1st-iteration.png)
 
+## Development
+
+Produce an executable file/app.
+
+```sh
+go build -o ocr src/*
+```
+
+Run the CLI app.
+
+```sh
+./ocr --lang=ara --img=xyz.png
+```
+
 ## Tasks
 
 Done & TO-DO of features, goals and values. tiny steps to the goal.
