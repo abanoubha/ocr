@@ -49,6 +49,7 @@ Done & TO-DO of features, goals and values. tiny steps to the goal.
 - [ ] available on Mac OS (likely via HomeBrew)
 - [ ] available on Windows
 - [ ] scan history : { original image, processed image, extracted text }
+- [ ] migrate from opencv into Go libs
 
 ### References
 
