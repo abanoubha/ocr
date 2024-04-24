@@ -12,7 +12,7 @@ import (
 	"gocv.io/x/gocv"
 )
 
-// ocr --lang=ara --img=xyz.png
+// ocr --lang=ara --img=img/default.png
 func main() {
 
 	// A/B Testing :

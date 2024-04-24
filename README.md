@@ -8,18 +8,20 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
 ![first iteration](./screenshots/1st-iteration.png)
 
-## Development
-
-Produce an executable file/app.
+## commands
 
 ```sh
+# get all dependencies of the project
+go mod tidy
+
+# build: produce an executable file/CLI app named "ocr"
 go build -o ocr src/*
-```
 
-Run the CLI app.
+# run the app to identify a sample image
+./ocr --lang=eng --img=img/default.png
 
-```sh
-./ocr --lang=ara --img=xyz.png
+# deps, build, run
+go mod tidy && go build -o ocr src/* && ./ocr --lang=eng --img=img/default.png
 ```
 
 ## Tasks
