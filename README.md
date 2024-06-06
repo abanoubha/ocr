@@ -22,6 +22,9 @@ go build -o ocr src/*
 
 # deps, build, run
 go mod tidy && go build -o ocr src/* && ./ocr --lang=eng --img=img/default.png
+
+# detect race conditions & memory leaks
+go run -race .
 ```
 
 ## Tasks
