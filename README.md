@@ -59,6 +59,7 @@ Done & TO-DO of features, goals and values. tiny steps to the goal.
 - [3b1b : what is a convolution?](https://youtu.be/KuXjwB4LzSA)
 - [train / refine tesseract OCR](https://github.com/abanoubha/train-tesseract-ocr)
 - [tesseractfonts : fine tune tesseract for new fonts](https://github.com/dhivehi/tesseractfonts)
+- [Pre-Recognize Library](https://github.com/leha-bot/PRLib) - library with algorithms for improving OCR quality.
 
 ## source code
 
