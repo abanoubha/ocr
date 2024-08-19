@@ -6,8 +6,6 @@ This software is __UNDER HEAVY DEVELOPMENT__. Use [this OCR software](https://ab
 
 v0.1.0<sup>[1](semanticVersioning.md)</sup>
 
-![first iteration](./screenshots/1st-iteration.png)
-
 ## commands
 
 ```sh
