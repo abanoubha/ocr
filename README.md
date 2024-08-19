@@ -15,13 +15,13 @@ v0.1.0<sup>[1](semanticVersioning.md)</sup>
 go mod tidy
 
 # build: produce an executable file/CLI app named "ocr"
-go build -o ocr src/*
+go build -o ocr .
 
 # run the app to identify a sample image
 ./ocr --lang=eng --img=img/default.png
 
 # deps, build, run
-go mod tidy && go build -o ocr src/* && ./ocr --lang=eng --img=img/default.png
+go mod tidy && go build -o ocr . && ./ocr --lang=eng --img=img/default.png
 
 # detect race conditions & memory leaks
 go run -race .
