@@ -27,32 +27,34 @@ go mod tidy && go build -o ocr . && ./ocr --lang=eng --img=img/default.png
 go run -race .
 ```
 
-## Tasks
+## Roadmap & Tasks
 
-Done & TO-DO of features, goals and values. tiny steps to the goal.
+Done & TO-DO of features, goals and values. tiny steps towards the goal.
 
-- [x] OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
-- [x] image to text
-- [ ] PDF to text
-- [ ] PDF to docx
-- [ ] PDF to selectable-text PDF
-- [ ] __scalable__ : take advantage of all CPU cores to get the job done faster
-- [ ] __bulk__ / __patch-processing__ : coroutines and parallelism for tasks / jobs
-- [ ] composable CLI app for scripts and automation
-- [ ] UX / easy to use / user friendly
-- [x] support English OCR
-- [x] support Arabic OCR
-- [x] add tests
-- [x] use some test images from [renard314/textfairy](https://github.com/renard314/textfairy)
-- [ ] cut the image into pieces/segments and concurrently OCR them. (performance)
-- [ ] available on Debian & Debian-based distros
-- [ ] available as snap
-- [ ] available as flatpak
-- [ ] available on Elementary OS
-- [ ] available on Mac OS (likely via HomeBrew)
-- [ ] available on Windows
-- [ ] scan history : { original image, processed image, extracted text }
-- [ ] migrate from opencv into Go libs
+- v0.1.0
+  - OCR library used is [tesseract-OCR](https://github.com/tesseract-ocr/tesseract) with the [gosseract](https://github.com/otiai10/gosseract) v2 wrapper.
+  - image to text
+  - support English OCR
+  - support Arabic OCR
+  - add tests
+  - use some test images from [renard314/textfairy](https://github.com/renard314/textfairy)
+- Next
+  - PDF to text
+  - PDF to docx
+  - PDF to selectable-text PDF
+  - __scalable__ : take advantage of all CPU cores to get the job done faster
+  - __bulk__ / __patch-processing__ : coroutines and parallelism for tasks / jobs
+  - composable CLI app for scripts and automation
+  - UX / easy to use / user friendly
+  - cut the image into pieces/segments and concurrently OCR them. (performance)
+  - available on Debian & Debian-based distros
+  - available as snap
+  - available as flatpak
+  - available on Elementary OS
+  - available on Mac OS (likely via HomeBrew)
+  - available on Windows
+  - scan history : { original image, processed image, extracted text }
+  - migrate from opencv into Go libs
 
 ### References
 
