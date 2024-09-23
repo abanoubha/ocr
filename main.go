@@ -7,7 +7,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/disintegration/imaging"
+	"github.com/kovidgoyal/imaging"
 	gosseract "github.com/otiai10/gosseract/v2"
 	"gocv.io/x/gocv"
 )
